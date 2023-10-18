@@ -10,7 +10,7 @@ get("/process_roll") do
 
   @num_sides = params.fetch("sides").to_i 
 
-  @rolls = {}
+  @rolls = []
 
   @num_dice.times do 
     @rolls.push(rand(1..@num_sides))
@@ -18,4 +18,3 @@ get("/process_roll") do
 
   erb(:results)
 end
-
